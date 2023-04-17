@@ -1,8 +1,9 @@
 <?php
 
-class DeleteProduct extends Db {
-
-    protected function delete($sku) {
+class DeleteProduct extends Db
+{
+    protected function delete($sku)
+    {
         $stmt = $this->connectDB()->prepare("DELETE FROM products WHERE sku = ?;");
 
         if (!$stmt->execute(array($sku))) {

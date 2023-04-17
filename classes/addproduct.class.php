@@ -1,8 +1,9 @@
 <?php
 
-class AddProduct extends Db {
-
-    protected function add($sku, $name, $price, $type, $details) {
+class AddProduct extends Db
+{
+    protected function add($sku, $name, $price, $type, $details)
+    {
         $stmt = $this->connectDB()->prepare("INSERT INTO products (sku, productName, price, productType, details) VALUES (?, ?, ?, ?, ?);");
 
         if (!$stmt->execute(array($sku, $name, $price, $type, $details))) {
@@ -15,7 +16,8 @@ class AddProduct extends Db {
         echo "Product added successfully..";
     }
 
-    protected function validateSku($sku) {
+    protected function validateSku($sku)
+    {
         $stmt = $this->connectDB()->prepare("SELECT * FROM products WHERE sku = ?;");
 
         if (!$stmt->execute(array($sku))) {
@@ -27,7 +29,7 @@ class AddProduct extends Db {
         $result = false;
         if ($stmt->rowCount() > 0) {
             $result = false;
-        }else {
+        } else {
             $result = true;
         }
         return $result;

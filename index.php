@@ -20,8 +20,8 @@
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.php">Product List</a>
                 <div class="d-flex grid gap-3">
-                    <a class="btn btn-outline-success" href="addproduct.php">Add</a>
-                    <button class="btn btn-danger" href="" name="submit" type="submit">Mass Delete</button>
+                    <a class="btn btn-outline-success" href="addproduct.php">ADD</a>
+                    <button class="btn btn-danger" href="" name="submit" type="submit">MASS DELETE</button>
                 </div>
             </div>
         </nav>
@@ -30,7 +30,7 @@
             <div class="row">
                 <?php
                     foreach ($allProducts as $product) {
-                ?>
+                        ?>
                 <div class="col">
                     <div class="card">
                         <div class="card-title d-flex justify-content-center">

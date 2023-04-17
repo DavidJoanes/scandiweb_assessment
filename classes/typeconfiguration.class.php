@@ -47,7 +47,7 @@
         }
 
         public function getType(ProductType $type)
-        {   
+        {
             return $type->setProperties($this->size, $this->weight, $this->height, $this->width, $this->length);
         }
     }
