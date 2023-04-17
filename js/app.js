@@ -35,7 +35,7 @@ const setError = (msg) => {
 		}
 
 		const req = await fetch(
-			`../assessment/api/check-sku/?sku=${sku.value}`
+			`../api/validate-sku/?sku=${sku.value}`
 		);
 		const res = await req.json();
 

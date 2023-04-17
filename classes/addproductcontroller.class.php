@@ -25,7 +25,7 @@ class AddProductController extends AddProduct
     public function addProduct()
     {
         if ($this->validateInput() == false) {
-            header("location: ../addproduct.php?error=invalid input!");
+            header("location: ../add-product/?error=invalid input!");
             exit();
         }
 

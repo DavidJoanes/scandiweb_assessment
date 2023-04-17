@@ -11,13 +11,13 @@
     <title>Add Product</title>
 </head>
 <body>
-    <form action="includes/addproduct.inc.php" method="post" id="product_form">
+    <form action="../includes/addproduct.inc.php" method="post" id="product_form">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand">Add Product</a>
                 <div class="d-flex grid gap-3">
                     <button class="btn btn-success" id="save" type="submit">Save</button>
-                    <a class="btn btn-outline-danger" href="index.php">Cancel</a>
+                    <a class="btn btn-outline-danger" href="../index.php">Cancel</a>
                 </div>
             </div>
         </nav>
@@ -63,6 +63,6 @@
             </div>
         </div>
     </form>
-    <script src="js/app.js"></script>
+    <script src="../js/app.js"></script>
 </body>
 </html>

@@ -20,7 +20,7 @@
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.php">Product List</a>
                 <div class="d-flex grid gap-3">
-                    <a class="btn btn-outline-success" href="addproduct.php">ADD</a>
+                    <a class="btn btn-outline-success" href="add-product/">ADD</a>
                     <button class="btn btn-danger" href="" value="MASS DELETE" name="submit" type="submit">MASS DELETE</button>
                 </div>
             </div>
