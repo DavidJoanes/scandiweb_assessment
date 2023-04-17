@@ -21,7 +21,7 @@
                 <a class="navbar-brand" href="index.php">Product List</a>
                 <div class="d-flex grid gap-3">
                     <a class="btn btn-outline-success" href="addproduct.php">ADD</a>
-                    <button class="btn btn-danger" href="" name="submit" type="submit">MASS DELETE</button>
+                    <button class="btn btn-danger" href="" value="MASS DELETE" name="submit" type="submit">MASS DELETE</button>
                 </div>
             </div>
         </nav>
@@ -35,7 +35,7 @@
                     <div class="card">
                         <div class="card-title d-flex justify-content-center">
                             <div class="form-check">
-                                <input type="checkbox" class="form-check-input" name="<?php echo $product["sku"] ?>" id="dropdownCheck">
+                                <input type="checkbox" class="form-check-input delete-checkbox" name="<?php echo $product["sku"] ?>" id="dropdownCheck">
                                 <label class="form-check-label" style="text-transform: uppercase;" for="dropdownCheck">
                                 <?php echo $product['sku']; ?>
                                 </label>

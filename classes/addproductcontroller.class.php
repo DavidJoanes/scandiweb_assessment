@@ -1,3 +1,8 @@
+?>
+    <script type="text/javascript">
+        const error = document.getElementById("error");
+    </script>
+?>
 <?php
 
 class AddProductController extends AddProduct
@@ -20,11 +25,7 @@ class AddProductController extends AddProduct
     public function addProduct()
     {
         if ($this->validateInput() == false) {
-            header("location: ../index.php?error=invalid input!");
-            exit();
-        }
-        if ($this->skuExist() == false) {
-            header("location: ../index.php?error=sku exist!");
+            header("location: ../addproduct.php?error=invalid input!");
             exit();
         }
 

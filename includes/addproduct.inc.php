@@ -1,6 +1,6 @@
 <?php
-
-if (isset($_POST["submit"])) {
+print_r($_POST);
+if (isset($_POST["sku"])) {
     include "../classes/typeconfiguration.class.php";
     include "../classes/db.class.php";
     include "../classes/addproduct.class.php";

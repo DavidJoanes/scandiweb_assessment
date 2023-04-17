@@ -1,9 +1,51 @@
 const switcher = document.getElementById("productType");
 const container = document.getElementById("switch");
 const sku = document.getElementById("sku");
-const save_btn = document.getElementById("save");
-const product_form = document.getElementById("product_form");
+const saveButton = document.getElementById("save");
+const productForm = document.getElementById("product_form");
 const error = document.getElementById("error");
+
+
+const setError = (msg) => {
+	saveButton.value = "Save";
+	error.innerText = msg;
+};
+
+(() => {
+	productForm.addEventListener("submit", async (e) => {
+		e.preventDefault();
+		saveButton.value = "loading..";
+
+		const selectedInput = Array.from(
+			document.querySelectorAll(
+				"#price, #size, #weight, #height, #width, #length"
+			)
+		);
+
+		for (let i = 0; i < selectedInput.length; i++) {
+			if (parseInt(selectedInput[i]?.value) < 0) {
+				return setError(
+					`Invalid ${selectedInput[i].id}! Negative value not allowed`
+				);
+			}
+
+			if (!/^\d+(.\d+)?$/.test(selectedInput[i]?.value)) {
+				return setError(`Invalid ${selectedInput[i].id}! Must be a number`);
+			}
+		}
+
+		const req = await fetch(
+			`../assessment/api/check-sku/?sku=${sku.value}`
+		);
+		const res = await req.json();
+
+		if (!res) {
+			return setError("Invalid Sku! Sku already exist!");
+		}
+
+        productForm.submit();
+	});
+})();
 
 function switchType() {
     if (switcher.value == "DVD") {

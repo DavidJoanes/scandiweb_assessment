@@ -34,4 +34,14 @@ class AddProduct extends Db
         }
         return $result;
     }
+    public function validateSku2($sku)
+    {
+        $result = false;
+        if (!$this->validateSku($sku)) {
+            $result= false;
+        } else {
+            $result = true;
+        }
+        return $result;
+    }
 }

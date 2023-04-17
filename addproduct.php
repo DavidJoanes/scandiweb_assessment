@@ -11,18 +11,24 @@
     <title>Add Product</title>
 </head>
 <body>
-    <form action="includes/addproduct.inc.php" method="post">
+    <form action="includes/addproduct.inc.php" method="post" id="product_form">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand">Add Product</a>
                 <div class="d-flex grid gap-3">
-                    <button class="btn btn-success" name="submit" type="submit">Add</button>
+                    <button class="btn btn-success" id="save" type="submit">Save</button>
                     <a class="btn btn-outline-danger" href="index.php">Cancel</a>
                 </div>
             </div>
         </nav>
         
         <div class="container">
+            <p id="error">
+                <?php
+                    if(isset($_GET['error']))
+                        echo $_GET['error'];
+                ?>
+            </p>
             <div class="col" style="padding: 5vh 40% 5vh 0;">
                 <form class="px-4 py-3 mb-3">
                     <div class="form-group d-flex grid gap-4">
