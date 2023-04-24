@@ -1,11 +1,6 @@
-?>
-    <script type="text/javascript">
-        const error = document.getElementById("error");
-    </script>
-?>
 <?php
 
-class AddProductController extends AddProduct
+class AddProductController extends ProductModel
 {
     private $sku;
     private $name;
@@ -37,17 +32,6 @@ class AddProductController extends AddProduct
         $result = false;
         if (empty($this->sku) || empty($this->name) || empty($this->price) || empty($this->type) || empty($this->details)) {
             $result = false;
-        } else {
-            $result = true;
-        }
-        return $result;
-    }
-
-    private function skuExist()
-    {
-        $result = false;
-        if (!$this->validateSku($this->sku)) {
-            $result= false;
         } else {
             $result = true;
         }

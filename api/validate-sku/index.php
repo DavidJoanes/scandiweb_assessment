@@ -1,6 +1,6 @@
 <?php
     require_once("../../classes/db.class.php");
-    require_once("../../classes/addproduct.class.php");
+    require_once("../../classes/productmodel.class.php");
 
     header('Access-Control-Allow-Origin: *');
     header("Content-Type: application/json; charset=UTF-8");
@@ -9,11 +9,11 @@
 
     $method = $_SERVER['REQUEST_METHOD'];
 
-    $product = new AddProduct();
+    $product = new ProductModel();
 
     if ($method == 'GET') {
         $sku = $_GET['sku'];
-        $response =  $product->validateSku2($sku);
+        $response =  $product->validateSku($sku);
 
         $json_response = json_encode($response);
         exit($json_response);

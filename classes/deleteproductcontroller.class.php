@@ -1,6 +1,6 @@
 <?php
 
-class DeleteProductController extends DeleteProduct
+class DeleteProductController extends ProductModel
 {
     public function deleteProduct($inputArray)
     {

@@ -3,7 +3,7 @@
     if (isset($_POST['submit'])) {
         // Importations
         include "../classes/db.class.php";
-        include "../classes/deleteproduct.class.php";
+        include "../classes/productmodel.class.php";
         include "../classes/deleteproductcontroller.class.php";
 
         // Instantiate signup controller class

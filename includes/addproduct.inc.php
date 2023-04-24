@@ -3,7 +3,7 @@ print_r($_POST);
 if (isset($_POST["sku"])) {
     include "../classes/typeconfiguration.class.php";
     include "../classes/db.class.php";
-    include "../classes/addproduct.class.php";
+    include "../classes/productmodel.class.php";
     include "../classes/addproductcontroller.class.php";
 
     // Fetching the data
