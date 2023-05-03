@@ -1,6 +1,6 @@
 <?php
 
-    class ViewProducts extends ProductModel
+    class ProductsView extends ProductModel
     {
         private $products = array();
 
