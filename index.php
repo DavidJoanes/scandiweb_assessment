@@ -1,5 +1,7 @@
 <?php
-    include "includes/autoloader.inc.php";
+    include "classes/db.class.php";
+    include "classes/productmodel.class.php";
+    include "classes/viewproducts.class.php";
     $products = new ViewProducts();
     $allProducts = $products->showProducts();
 ?>

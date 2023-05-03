@@ -1,6 +1,6 @@
 <?php
 
-class AddProductController extends ProductModel
+class ProductController extends ProductModel
 {
     private $sku;
     private $name;
@@ -36,5 +36,16 @@ class AddProductController extends ProductModel
             $result = true;
         }
         return $result;
+    }
+
+    public function deleteProduct($inputArray)
+    {
+        foreach ($inputArray as $key => $val) {
+            $sku = "";
+            if ($key !== "submit") {
+                $sku = $key;
+            }
+            $this->delete($sku);
+        }
     }
 }

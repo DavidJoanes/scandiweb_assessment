@@ -4,10 +4,10 @@
         // Importations
         include "../classes/db.class.php";
         include "../classes/productmodel.class.php";
-        include "../classes/deleteproductcontroller.class.php";
+        include "../classes/productcontroller.class.php";
 
         // Instantiate signup controller class
-        $product = new DeleteProductController();
+        $product = new ProductController('', '', '', '', '');
 
         // Error handler
         $product->deleteProduct($_POST);

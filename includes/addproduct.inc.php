@@ -4,7 +4,7 @@ if (isset($_POST["sku"])) {
     include "../classes/typeconfiguration.class.php";
     include "../classes/db.class.php";
     include "../classes/productmodel.class.php";
-    include "../classes/addproductcontroller.class.php";
+    include "../classes/productcontroller.class.php";
 
     // Fetching the data
     $sku = $_POST["sku"];
@@ -23,7 +23,7 @@ if (isset($_POST["sku"])) {
     $details = $typeController->getType(new $capitalizedType());
 
     // Instantiate signup controller class
-    $add = new AddProductController($sku, $name, $price, $type, $details);
+    $add = new ProductController($sku, $name, $price, $type, $details);
 
     // Error handlers
     $add->addProduct();
